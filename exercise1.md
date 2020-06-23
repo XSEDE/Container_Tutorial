@@ -27,6 +27,9 @@ via chat!*
 Please look in 
 ```/opt/ohpc/pub/examples/ex1_docker.txt```
 
+Create a local work directory:
+```$ mkdir ./ex1-workdir```
+
 # Step 2: Conversion to Singularity
 Now that you've build a dockerfile, it's time to make it useable in our 
 HPC environment.
@@ -43,7 +46,7 @@ for cases where it's necessary to modify the environment further.
 Make a local copy of the example Singularity definition file available in
 our examples folder:
 
-```$ cp /opt/ohpc/pub/examples/ex1_singularity.def ~/sing-workdir```
+```$ cp /opt/ohpc/pub/examples/ex1_singularity.def ~/ex1-workdir```
 
 (notice the .def extension - it's still just a text file, but
 this is the convention used in Singularity documentation for 
@@ -51,7 +54,7 @@ human-friendliness!)
 
 Now, take a look in an editor:
 ```
-$ cd ~/sing-workdir
+$ cd ~/ex1-workdir
 $ vim ./ex1_singularity.def
 ```
 
@@ -108,7 +111,7 @@ EDIT THIS
 # Step 4: Running a job
 Please make a local copy of the slurm example job file:
 ```
-$ cp /opt/ohpc/examples/slurm_example.job ~/sing-workdir
+$ cp /opt/ohpc/examples/slurm_example.job ~/ex1-workdir
 $ cat slurm_example.job
 ...
 ```
