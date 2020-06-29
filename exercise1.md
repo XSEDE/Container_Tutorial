@@ -218,9 +218,10 @@ via Github (you will need to allow the application read-only access to your
 GitHub profile).
 
 Now, you'll have the ability to create "collections" of containers for other
-users to access, and for yourself. This is an instance of the "sregistry" software,
-which underlies the main Singularity-Hub.
-(MORE DESCRIPTION HERE)
+users to access, and for yourself. This is an instance of the "SRegistry" software,
+which underlies the main Singularity-Hub. 
+Unlike Dockerhub, the SRegistry software organizes container images by
+collection, in addition to username, so go ahead and create one for yourself now.
 
 Once you've created a collection, you're ready to upload via the Singularity client.
 (Will everyone need a unique name here?!)
