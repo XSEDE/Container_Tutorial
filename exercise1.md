@@ -3,15 +3,16 @@
 
 # Overview
 
-We're going to take one one of the dockerfiles you've already seen,
+We're going to take one one of the Dockerfiles you've already seen,
 build the docker image, convert it to Singularity, and run
 a job using the Slurm job scheduler. 
 
 We will also walk through the workflow needed to authenticate to
 and use a remote container registry - this will be basically the 
-same as what's used on DockerHub and Singularity-Hub (or the Sylabs
-cloud repository, but we'll be using a Jetstream-local instance
-of the Singularity Registry (the software underlying S-Hub).
+same as what's used on DockerHub and Singularity-Hub.  It is also
+similar to the Sylabs cloud repository, but we'll be using a 
+Jetstream-local instance of the Singularity Registry (the software 
+underlying S-Hub).
 
 ## The Infrastructure
 
@@ -105,14 +106,14 @@ docker images
 ```
 
 # Step 2: Conversion to Singularity
-Now that you've build a Docker image, it's time to make it useable in our 
+Now that you've built a Dockerfile, it's time to make it useable in our 
 HPC environment.
 
 First, load the `singularity` module:
 ```$ module load singularity```
 
-This will give your shell session access to the singularity executable, etc.
-We're going to convert by simply including the docker image
+This will give your shell session access to the Singularity executable, etc.
+We're going to convert by simply including the Docker image
 in our Singularity Definition file. It's also possible to convert the image
 directy, but we want to illustrate the use of a Docker image as a base 
 for cases where it's necessary to modify the environment further.
@@ -208,16 +209,16 @@ with collaborators (and enemies) or a community of users.
 So, switch to your  brower and go to 
 <https://tutorial.jetstream-cloud.org>.
 
-Select 'Login' on the top bar, and you'll be asked to authenticate
+Select **Login** on the top bar, and you'll be asked to authenticate
 via Github (you will need to allow the application read-only access to your
-Git profile).
+GitHub profile).
 
 Now, you'll have the ability to create "collections" of containers for other
 users to access, and for yourself. This is an instance of the "sregistry" software,
 which underlies the main Singularity-Hub.
 (MORE DESCRIPTION HERE)
 
-Once you've created a collection, you're ready to upload via the singularity client.
+Once you've created a collection, you're ready to upload via the Singularity client.
 (Will everyone need a unique name here?!)
 
 Register the remote:
@@ -236,7 +237,7 @@ the collection you created earlier.
 ```$ singularity push -U Dice.sif library://$USERNAME/$COLLECTION_NAME/py3-dice:latest```
 
 # Step 4: Running a job
-Please make a local copy of the slurm example job file:
+Please make a local copy of the Slurm example job file:
 ```
 $ cp /opt/ohpc/examples/slurm_example.job ~/ex1-workdir
 $ cat slurm_example.job
@@ -245,7 +246,7 @@ $ cat slurm_example.job
 
 Notice that in the beginning, we're purging and re-loading
 several modules. For the sake of completeness, let's quickly explore
-what modules are available on the sysem:
+what modules are available on the system:
 ```$ module avail
 
 ------------------------------------- /opt/ohpc/pub/moduledeps/gnu -------------------------------------
