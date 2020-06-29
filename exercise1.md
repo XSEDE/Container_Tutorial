@@ -194,12 +194,15 @@ unpacked, the steps in the definition file are applied, and then the result is
 packed in a SIF file.
 
 #Step 3: Upload to a Registry
-;works: singularity pull shub://tutorial.jetstream-cloud.org/tutorial-containers/numpy-pillow:latest
-; when did this work? it doesn't now. Maybe due to the push command used...
-;works: singularity pull library://ECoulter/tutorial-containers/mymandle:latest
-;fails: singularity pull library://ECoulter/tutorial-containers/numpy-pillow:latest
-;works: singularity push -U mymandle.sif library://ECoulter/tutorial-containers/mymandle:latest
-;fails: singularity push -U mymandle.sif library://tutorial.jetstream-cloud.org/ECoulter/tutorial-containers/mymandle:latest
+
+<!--
+works: singularity pull shub://tutorial.jetstream-cloud.org/tutorial-containers/numpy-pillow:latest
+ when did this work? it doesn't now. Maybe due to the push command used...
+works: singularity pull library://ECoulter/tutorial-containers/mymandle:latest
+fails: singularity pull library://ECoulter/tutorial-containers/numpy-pillow:latest
+works: singularity push -U mymandle.sif library://ECoulter/tutorial-containers/mymandle:latest
+fails: singularity push -U mymandle.sif library://tutorial.jetstream-cloud.org/ECoulter/tutorial-containers/mymandle:latest
+-->
 
 We're going to share our containers via a registry, now, since in
 normal practice, you won't be able to build containers on the same
