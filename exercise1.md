@@ -193,7 +193,7 @@ Each layer of the Docker container is copied into a temporary space,
 unpacked, the steps in the definition file are applied, and then the result is 
 packed in a SIF file.
 
-#Step 3: Upload to a Registry
+# Step 3: Upload to a Registry
 
 <!--
 works: singularity pull shub://tutorial.jetstream-cloud.org/tutorial-containers/numpy-pillow:latest
