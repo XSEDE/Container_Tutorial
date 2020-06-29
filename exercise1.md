@@ -195,6 +195,7 @@ packed in a SIF file.
 
 #Step 3: Upload to a Registry
 ;works: singularity pull shub://tutorial.jetstream-cloud.org/tutorial-containers/numpy-pillow:latest
+; when did this work? it doesn't now. Maybe due to the push command used...
 ;works: singularity pull library://ECoulter/tutorial-containers/mymandle:latest
 ;fails: singularity pull library://ECoulter/tutorial-containers/numpy-pillow:latest
 ;works: singularity push -U mymandle.sif library://ECoulter/tutorial-containers/mymandle:latest
@@ -230,6 +231,9 @@ And authenticate:
 Now you've got a token stored on this machine that will allow you continued access to the
 registry.
 
+Next, set that repository as your default:
+```singularity remote use TutorialSRegistry```
+
 Upload your container via the following, 
 remembering to replace `$USERNAME` with your actual github username
 used to authenticate to the registry and `YOUR-COLLECTION-NAME` with the name of
@@ -241,8 +245,29 @@ Please make a local copy of the Slurm example job file:
 ```
 $ cp /opt/ohpc/examples/slurm_example.job ~/ex1-workdir
 $ cat slurm_example.job
+#!/bin/bash
+#SBATCH -N 1 #Number of nodes
+#SBATCH -n 2 #Number of "tasks"
+#SBATCH -p cloud #Run in the "cloud" partition
+#SBATCH -o dice_test_%A.out #The %A refers to the slurm job ID, this is useful for distinguishing output files
+
+module purge
+module load gnu
+module load openmpi
+module load singularity
+
+USERNAME="ECoulter"
+COLLECTION_NAME="jec-collection"
+
+srun -l singularity run shub://tutorial.jetstream-cloud.org/${USERNAME}/${COLLECTION_NAME}/py3-dice:latest
 ...
 ```
+
+Go ahead and edit `USERNAME` and `COLLECTION_NAME` to fit your user, 
+and submit via:
+```sbatch slurm_dice.job```
+
+While we wait for that to run, let's discuss the module commmands:
 
 Notice that in the beginning, we're purging and re-loading
 several modules. For the sake of completeness, let's quickly explore
@@ -269,3 +294,35 @@ compilers - so there are other MPI implementations available if you switch via
 Your current module environment is also inherited by your Slurm script,
 hence the `module purge` command - better to be absolutely clear what will
 be loaded in your job environment.
+
+Now, check your job status via the `squeue` command:
+```$ squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+                63     cloud slurm_di jecoulte  R       0:01      1 tg829096-compute-0
+```
+
+You should see an output file in your current directory that looks like:
+```$ cat dice_test_63.out
+NAME                 URI                           GLOBAL
+SylabsCloud          cloud.sylabs.io               YES
+[TutorialSRegistry]  tutorial.jetstream-cloud.org  NO
+INFO:    Remote "TutorialSRegistry" now in use.
+INFO:    Downloading library image
+ 18.73 MiB / 18.73 MiB  100.00% 115.54 MiB/s 0s
+WARNING: group: unknown groupid 1003
+How many times would you like to roll the dice?Rolling the dice 10 times...
+You rolled the dice  10 times, getting an average value of  6.7 .
+The highest round was: 10
+The lowest round was: 2
+
+```
+
+If you run this job again, you'll notice the absence of the 
+download progress line - Singularity keeps a local cache of containers
+used recently, and matches the sha256 hash of cached vs. remote 
+containers before downloading - notice that if the remote container
+has been updated, using the `singularity run` command with a remote URI will
+result in running the new version, rather than the local version.
+If that's a potential stumbling block, it's safest to use
+```singularity pull -U library://${USERNAME}/${COLLECTION_NAME}/py3-dice:latest```
+for example, and then run jobs using the local .sif file.
