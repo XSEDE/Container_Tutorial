@@ -38,8 +38,8 @@ and make your own copy named `Dockerfile`:
 ```cp /opt/ohpc/pub/examples/ex1_docker.txt ~/ex1-workdir/Dockerfile```
 
 Examine the contents:
-```cd ~/ex1-workdir```
-```cat ./Dockerfile
+```$ cd ~/ex1-workdir
+$ cat ./Dockerfile
 # our base image
 FROM alpine:3.9
 
@@ -47,11 +47,16 @@ FROM alpine:3.9
 RUN apk add --update py3-pip
 
 # copy files required for the app to run
-COPY /opt/ohpc/pub/examples/dice.py /usr/src/app/
+COPY dice.py /usr/src/app/
 
 # run the application
 CMD python3 /usr/src/app/dice.py
 ```
+
+Notice that the COPY directive refers to a file we don't have in
+the local directory. It's not possible to COPY or ADD files from 
+"above" the current location, so we'll need to grab that as well:
+```$ cp /opt/ohpc/pub/examples/dice.py. ~/ex1-workdir/dice.py```
 
 The dice.py script will "roll" a pair of dice a certain number
 of times, and return some very basic information about the results:
