@@ -32,10 +32,10 @@ To begin with, we've got a dockerfile similar to what you've
 seen already available in:
 ```/opt/ohpc/pub/examples/ex1_docker.txt```
 
-Create a local work directory:
-```$ mkdir ./ex1-workdir```
+Create a work directory in your homedir:
+```$ mkdir ~/ex1-workdir```
 and make your own copy named `Dockerfile`:
-```cp /opt/ohpc/pub/examples/ex1_docker.txt ~/ex1-workdir/Dockerfile```
+```$ cp /opt/ohpc/pub/examples/ex1_docker.txt ~/ex1-workdir/Dockerfile```
 
 Examine the contents:
 ```$ cd ~/ex1-workdir
@@ -54,15 +54,15 @@ CMD python3 /usr/src/app/dice.py
 ```
 
 Notice that the COPY directive refers to a file we don't have in
-the local directory. It's not possible to COPY or ADD files from 
+the current working directory. It's not possible to COPY or ADD files from 
 "above" the current location, so we'll need to grab that as well:
 
-```$ cp /opt/ohpc/pub/examples/dice.py. ~/ex1-workdir/dice.py```
+```$ cp /opt/ohpc/pub/examples/dice.py ~/ex1-workdir/dice.py```
 
 The dice.py script will "roll" a pair of dice a certain number
 of times, and return some very basic information about the results:
 
-```$ cat /opt/ohpc/pub/examples/dicy.py
+```$ cat /opt/ohpc/pub/examples/dice.py
 #!/usr/bin/env python3
 import random
 minimum = 1
