@@ -258,11 +258,11 @@ the collection you created earlier.
 # Step 4: Running a job
 Please make a local copy of the Slurm example job file:
 ```
-$ cp /opt/ohpc/examples/slurm_example.job ~/ex1-workdir
-$ cat slurm_example.job
+$ cp /opt/ohpc/pub/examples/slurm_dice.job ~/ex1-workdir
+$ cat slurm_dice.job
 #!/bin/bash
 #SBATCH -N 1 #Number of nodes
-#SBATCH -n 2 #Number of "tasks"
+#SBATCH -n 1 #Number of "tasks"
 #SBATCH -p cloud #Run in the "cloud" partition
 #SBATCH -o dice_test_%A.out #The %A refers to the slurm job ID, this is useful for distinguishing output files
 
@@ -271,16 +271,19 @@ module load gnu
 module load openmpi
 module load singularity
 
-USERNAME="ECoulter"
-COLLECTION_NAME="jec-collection"
+GIT_USERNAME="ECoulter"
+COLLECTION_NAME="test-user-containers"
+NUM_ROLLS=10
 
-srun -l singularity run shub://tutorial.jetstream-cloud.org/${USERNAME}/${COLLECTION_NAME}/py3-dice:latest
+singularity remote use TutorialSRegistry
+
+singularity run library://${GIT_USERNAME}/${COLLECTION_NAME}/py3-dice:latest ${NUM_ROLLS}
 ...
 ```
 
-Go ahead and edit `USERNAME` and `COLLECTION_NAME` to fit your user, 
+Go ahead and edit `GIT_USERNAME` and `COLLECTION_NAME` to fit your user, 
 and submit via:
-```sbatch slurm_dice.job```
+```$ sbatch slurm_dice.job```
 
 While we wait for that to run, let's discuss the module commmands:
 
