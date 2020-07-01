@@ -56,11 +56,13 @@ CMD python3 /usr/src/app/dice.py
 Notice that the COPY directive refers to a file we don't have in
 the local directory. It's not possible to COPY or ADD files from 
 "above" the current location, so we'll need to grab that as well:
+
 ```$ cp /opt/ohpc/pub/examples/dice.py. ~/ex1-workdir/dice.py```
 
 The dice.py script will "roll" a pair of dice a certain number
 of times, and return some very basic information about the results:
-```cat /opt/ohpc/pub/examples/dicy.py
+
+```$ cat /opt/ohpc/pub/examples/dicy.py
 #!/usr/bin/env python3
 import random
 minimum = 1
@@ -85,7 +87,8 @@ print("The lowest round was:",min(totals))
 ```
 
 Now, you can build the image from the Dockerfile via:
-```sudo docker build -t $USERNAME/py3-dice .```
+
+```$ sudo docker build -t $USERNAME/py3-dice .```
 
 Which should generate output similar to:
 ```
@@ -107,7 +110,7 @@ Successfully built d7bb6e1691d8
 
 To view the list of images available locally, run
 ```
-docker images
+$ sudo docker images
 ```
 
 # Step 2: Conversion to Singularity
@@ -243,11 +246,14 @@ registry.
 Next, set that repository as your default:
 ```singularity remote use TutorialSRegistry```
 
+(If you don't do this, be prepared for subsequent commands to fail without
+adding --library https://tutorial.jetstream-cloud.org/).
+
 Upload your container via the following, 
-remembering to replace `$USERNAME` with your actual github username
+remembering to replace `$GITHUB_USERNAME` with your actual github username
 used to authenticate to the registry and `YOUR-COLLECTION-NAME` with the name of
 the collection you created earlier.
-```$ singularity push -U Dice.sif library://$USERNAME/$COLLECTION_NAME/py3-dice:latest```
+```$ singularity push -U ex1.sif library://$GITHUB_USERNAME/$COLLECTION_NAME/py3-dice:latest```
 
 # Step 4: Running a job
 Please make a local copy of the Slurm example job file:
