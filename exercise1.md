@@ -86,7 +86,8 @@ print("The highest round was:",max(totals))
 print("The lowest round was:",min(totals))
 ```
 
-Now, you can build the image from the Dockerfile via:
+Now, you can build the image from the Dockerfile via the following
+command, but be sure to replace $USERNAME with you current username:
 
 ```$ sudo docker build -t $USERNAME/py3-dice .```
 
