@@ -257,8 +257,7 @@ Once you've created a collection, you're ready to upload via the Singularity cli
 Register the remote:
 
 ```
-singularity remote add --no-login TutorialSRegistry \
-https://tutorial.jetstream-cloud.org
+singularity remote add --no-login TutorialSRegistry https://tutorial.jetstream-cloud.org
 ```
 
 #### 3(d)
