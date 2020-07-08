@@ -14,6 +14,9 @@ similar to the Sylabs cloud repository, but we'll be using a
 Jetstream-local instance of the Singularity Registry (the software 
 underlying S-Hub).
 
+*PLEASE NOTE*: The instructor will be using vim for any file editing
+that needs to be done - you may also use nano. 
+
 ## The Infrastructure
 
 You'll be using a virtual cluster in the Jetstream cloud
@@ -253,7 +256,8 @@ Once you've created a collection, you're ready to upload via the Singularity cli
 #### 3(c)
 Register the remote:
 
-```singularity remote add --no-login TutorialSRegistry \
+```
+singularity remote add --no-login TutorialSRegistry \
 https://tutorial.jetstream-cloud.org
 ```
 
@@ -303,13 +307,13 @@ module load gnu
 module load openmpi
 module load singularity
 
-GIT_USERNAME="ECoulter"
-COLLECTION_NAME="test-user-containers"
-NUM_ROLLS=10
+USERNAME="ECoulter"
+COLLECTION_NAME="tutorial-containers"
 
+singularity remote list
 singularity remote use TutorialSRegistry
 
-singularity run library://${GIT_USERNAME}/${COLLECTION_NAME}/py3-dice:latest ${NUM_ROLLS}
+singularity run library://${USERNAME}/${COLLECTION_NAME}/py3-dice-example:latest 10
 ...
 ```
 
