@@ -32,11 +32,17 @@ To begin with, we've got a dockerfile similar to what you've
 seen already available in:
 ```/opt/ohpc/pub/examples/ex1_docker.txt```
 
+#### 1(a)
 Create a work directory in your homedir:
 ```$ mkdir ~/ex1-workdir```
-and make your own copy named `Dockerfile`:
+
+and cd into it:
+```$ cd ~/ex1-workdir```
+
+now, make your own copy of the dockerfile mentioned above named `Dockerfile`:
 ```$ cp /opt/ohpc/pub/examples/ex1_docker.txt ~/ex1-workdir/Dockerfile```
 
+#### 1(b)
 Examine the contents:
 ```$ cd ~/ex1-workdir
 $ cat ./Dockerfile
@@ -53,6 +59,7 @@ COPY dice.py /usr/src/app/
 CMD python3 /usr/src/app/dice.py
 ```
 
+#### 1(c)
 Notice that the COPY directive refers to a file we don't have in
 the current working directory. It's not possible to COPY or ADD files from 
 "above" the current location, so we'll need to grab that as well:
@@ -86,6 +93,7 @@ print("The highest round was:",max(totals))
 print("The lowest round was:",min(totals))
 ```
 
+#### 1(d)
 Now, you can build the image from the Dockerfile via the following
 command, but be sure to replace $USERNAME with you current username:
 
@@ -118,6 +126,7 @@ $ sudo docker images
 Now that you've built a Dockerfile, it's time to make it useable in our 
 HPC environment.
 
+#### 2(a)
 First, load the `singularity` module:
 ```$ module load singularity```
 
@@ -127,6 +136,7 @@ in our Singularity Definition file. It's also possible to convert the image
 directy, but we want to illustrate the use of a Docker image as a base 
 for cases where it's necessary to modify the environment further.
 
+#### 2(b)
 Make a local copy of the example Singularity definition file available in
 our examples folder:
 
@@ -136,6 +146,7 @@ our examples folder:
 this is the convention used in Singularity documentation for 
 human-friendliness!)
 
+#### 2(c)
 Now, take a look in an editor:
 ```
 $ cd ~/ex1-workdir
@@ -158,9 +169,10 @@ From: $USERNAME/py3-dice:latest
  number of dice rolls.
 ```
 
+#### 2(d)
 Now, to build the container:
 
-```sudo $(which singularity) build ex1.sif Dice.def```
+```$ sudo $(which singularity) build ex1.sif Dice.def```
 
 The reason we're using `which` is thanks to the combination of Singularity's 
 trust model and the module system - users are not allowed to build containers
@@ -219,6 +231,7 @@ host that you're submitting jobs from. This also aids the goal
 of reproducible science - once your container is shared, you can share 
 with collaborators (and enemies) or a community of users.
 
+#### 3(a)
 So, switch to your  brower and go to 
 <https://tutorial.jetstream-cloud.org>.
 
@@ -226,30 +239,39 @@ Select **Login** on the top bar, and you'll be asked to authenticate
 via Github (you will need to allow the application read-only access to your
 GitHub profile).
 
+#### 3(b)
 Now, you'll have the ability to create "collections" of containers for other
 users to access, and for yourself. This is an instance of the "SRegistry" software,
 which underlies the main Singularity-Hub. 
 Unlike Dockerhub, the SRegistry software organizes container images by
-collection, in addition to username, so go ahead and create one for yourself now.
+collection, in addition to username, so 
+*click "New Collection" to create one now.*
 
 Once you've created a collection, you're ready to upload via the Singularity client.
 (Will everyone need a unique name here?!)
 
+#### 3(c)
 Register the remote:
-```singularity remote add --no-login TutorialSRegistry https://tutorial.jetstream-cloud.org```
 
+```singularity remote add --no-login TutorialSRegistry \
+https://tutorial.jetstream-cloud.org
+```
+
+#### 3(d)
 And authenticate:
 ```singularity remote login TutorialSRegistry```
 
 Now you've got a token stored on this machine that will allow you continued access to the
 registry.
 
+#### 3(e)
 Next, set that repository as your default:
 ```singularity remote use TutorialSRegistry```
 
 (If you don't do this, be prepared for subsequent commands to fail without
 adding --library https://tutorial.jetstream-cloud.org/).
 
+#### 3(d)
 Upload your container via the following, 
 remembering to replace `$GITHUB_USERNAME` with your actual github username
 used to authenticate to the registry and `YOUR-COLLECTION-NAME` with the name of
@@ -282,9 +304,21 @@ singularity run library://${GIT_USERNAME}/${COLLECTION_NAME}/py3-dice:latest ${N
 ...
 ```
 
+#### 4(b)
 Go ahead and edit `GIT_USERNAME` and `COLLECTION_NAME` to fit your user, 
 and submit via:
 ```$ sbatch slurm_dice.job```
+
+#### 4(c)
+Now, check your job status via the `squeue` command:
+```$ squeue
+             JOBID PARTITION     NAME     USER  ST       TIME  NODES NODELIST(REASON)
+                63     cloud slurm_di jecoulte  CF      0:01      1 tg829096-compute-0
+```
+(Note the 'ST' or State column: the 'CF' state indicates that nodes for the job are 
+being created, 'R' indicates a currently
+running job, PD means the job will run as soon as there are slots available, CD is a completed job,
+and F means some process exited with an error code).
 
 While we wait for that to run, let's discuss the module commmands:
 
@@ -314,12 +348,8 @@ Your current module environment is also inherited by your Slurm script,
 hence the `module purge` command - better to be absolutely clear what will
 be loaded in your job environment.
 
-Now, check your job status via the `squeue` command:
-```$ squeue
-             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-                63     cloud slurm_di jecoulte  R       0:01      1 tg829096-compute-0
-```
 
+#### 4(d)
 You should see an output file in your current directory that looks like:
 ```$ cat dice_test_63.out
 NAME                 URI                           GLOBAL
