@@ -276,7 +276,9 @@ Upload your container via the following,
 remembering to replace `$GITHUB_USERNAME` with your actual github username
 used to authenticate to the registry and `YOUR-COLLECTION-NAME` with the name of
 the collection you created earlier.
-```$ singularity push -U ex1.sif library://$GITHUB_USERNAME/$COLLECTION_NAME/py3-dice:latest```
+*Be sure to replace USERNAME with your current username, so you don't conflict with any other 
+extant containers!*
+```$ singularity push -U ex1.sif library://$GITHUB_USERNAME/$COLLECTION_NAME/$USERNAME-py3-dice:latest```
 
 # Step 4: Running a job
 
