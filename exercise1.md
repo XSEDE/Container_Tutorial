@@ -279,10 +279,17 @@ the collection you created earlier.
 ```$ singularity push -U ex1.sif library://$GITHUB_USERNAME/$COLLECTION_NAME/py3-dice:latest```
 
 # Step 4: Running a job
-Please make a local copy of the Slurm example job file:
+
+Now, we're going to walk through using our container *from the registry* with an
+HPC job scheduler, Slurm. We'll submit a batch job file to the scheduler, watch the
+job run, and view the output files - this workflow is basically what happens on the
+background when using a science gateway.
+
+#### 4(a)
+Please make a local copy of the Slurm example job file and open in an editor:
 ```
 $ cp /opt/ohpc/pub/examples/slurm_dice.job ~/ex1-workdir
-$ cat slurm_dice.job
+$ vim slurm_dice.job
 #!/bin/bash
 #SBATCH -N 1 #Number of nodes
 #SBATCH -n 1 #Number of "tasks"
@@ -306,7 +313,7 @@ singularity run library://${GIT_USERNAME}/${COLLECTION_NAME}/py3-dice:latest ${N
 
 #### 4(b)
 Go ahead and edit `GIT_USERNAME` and `COLLECTION_NAME` to fit your user, 
-and submit via:
+and submit to the scheduler via:
 ```$ sbatch slurm_dice.job```
 
 #### 4(c)
