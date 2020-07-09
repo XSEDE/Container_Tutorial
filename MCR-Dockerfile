@@ -1,0 +1,19 @@
+FROM centos:7
+
+RUN mkdir /opt/mcr && \
+yum install wget unzip libXsts -y && \
+mkdir /mcr-install && \
+cd /mcr-install && \
+wget https://ssd.mathworks.com/supportfiles/downloads/R2018a/deployment_files/R2018a/installers/glnxa64/MCR_R2018a_glnxa64_installer.zip && \
+unzip MCR_R2018a_glnxa64_installer.zip && \
+./install -mode silent -agreeToLicense yes -destinationsFolder /opt/mcr && \
+rm -Rf /mcr-install
+
+ENV LD_LIBRARY_PATH /usr/local/MATLAB/MATLAB_Runtime/v94/runtime/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v94/bin/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v94/sys/os/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v94/extern/bin/glnxa64
+ENV XAPPLRESDIR=/usr/local/MATLAB/MATLAB_Runtime/v94/X11/app-defaults
+#ENV XAPPLRESDIR /opt/mcr/v94/X11/app-defaults
+
+ADD test /test
+RUN chmod +x test
+
+#RUN ./test
