@@ -310,6 +310,7 @@ USERNAME="ECoulter"
 COLLECTION_NAME="tutorial-containers"
 
 singularity remote list
+singularity remote add --no-login TutorialSRegistry https://tutorial.jetstream-cloud.org
 singularity remote use TutorialSRegistry
 
 singularity run library://${USERNAME}/${COLLECTION_NAME}/py3-dice-example:latest 10
