@@ -278,7 +278,7 @@ adding --library https://tutorial.jetstream-cloud.org/).
 Upload your container via the following, 
 remembering to replace `$GITHUB_USERNAME` with your actual github username
 used to authenticate to the registry and `YOUR-COLLECTION-NAME` with the name of
-the collection you created earlier.
+the collection you created earlier. *Case matters* for these names as well.
 *Be sure to replace USERNAME with your current username, so you don't conflict with any other 
 extant containers!*
 ```$ singularity push -U ex1.sif library://$GITHUB_USERNAME/$COLLECTION_NAME/$USERNAME-py3-dice:latest```
