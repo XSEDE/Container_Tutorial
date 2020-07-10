@@ -14,7 +14,7 @@ similar to the Sylabs cloud repository, but we'll be using a
 Jetstream-local instance of the Singularity Registry (the software 
 underlying S-Hub).
 
-*PLEASE NOTE*: The instructor will be using vim for any file editing
+**PLEASE NOTE**: The instructor will be using vim for any file editing
 that needs to be done - you may also use nano. 
 
 ## The Infrastructure
@@ -150,7 +150,7 @@ this is the convention used in Singularity documentation for
 human-friendliness!)
 
 #### 2(c)
-Now, take a look in an editor:
+Now, take a look in an editor **(there is a $USERNAME variable that must be changed on line 2)**:
 ```
 $ cd ~/ex1-workdir
 $ vim ./Dice.def
@@ -182,7 +182,7 @@ trust model and the module system - users are not allowed to build containers
 without root permissions (because the build process can require touching
 files that require root access), and the environment variables loaded by
 the singularity modules do not transfer to the sub-process spawned by the
-sudo command. Shell expansion happens *before* the sub-process, however, 
+sudo command. Shell expansion happens **before** the sub-process, however, 
 so we're still able to leverage environment settings, rather than using
 the whole path to the binary.
 
@@ -248,7 +248,7 @@ users to access, and for yourself. This is an instance of the "SRegistry" softwa
 which underlies the main Singularity-Hub. 
 Unlike Dockerhub, the SRegistry software organizes container images by
 collection, in addition to username, so 
-*click "New Collection" to create one now.*
+**click "New Collection" to create one now.**
 
 Once you've created a collection, you're ready to upload via the Singularity client.
 (Will everyone need a unique name here?!)
@@ -278,14 +278,14 @@ adding --library https://tutorial.jetstream-cloud.org/).
 Upload your container via the following, 
 remembering to replace `$GITHUB_USERNAME` with your actual github username
 used to authenticate to the registry and `YOUR-COLLECTION-NAME` with the name of
-the collection you created earlier. *Case matters* for these names as well.
-*Be sure to replace USERNAME with your current username, so you don't conflict with any other 
-extant containers!*
+the collection you created earlier. **Case matters** for these names as well.
+**Be sure to replace USERNAME with your current username, so you don't conflict with any other 
+extant containers!**
 ```$ singularity push -U ex1.sif library://$GITHUB_USERNAME/$COLLECTION_NAME/$USERNAME-py3-dice:latest```
 
 # Step 4: Running a job
 
-Now, we're going to walk through using our container *from the registry* with an
+Now, we're going to walk through using our container **from the registry** with an
 HPC job scheduler, Slurm. We'll submit a batch job file to the scheduler, watch the
 job run, and view the output files - this workflow is basically what happens on the
 background when using a science gateway.
