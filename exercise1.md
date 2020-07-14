@@ -257,19 +257,19 @@ Once you've created a collection, you're ready to upload via the Singularity cli
 Register the remote:
 
 ```
-singularity remote add --no-login TutorialSRegistry https://tutorial.jetstream-cloud.org
+$ singularity remote add --no-login TutorialSRegistry https://tutorial.jetstream-cloud.org
 ```
 
 #### 3(d)
 And authenticate:
-```singularity remote login TutorialSRegistry```
+```$ singularity remote login TutorialSRegistry```
 
 Now you've got a token stored on this machine that will allow you continued access to the
 registry.
 
 #### 3(e)
 Next, set that repository as your default:
-```singularity remote use TutorialSRegistry```
+```$ singularity remote use TutorialSRegistry```
 
 (If you don't do this, be prepared for subsequent commands to fail without
 adding --library https://tutorial.jetstream-cloud.org/).
