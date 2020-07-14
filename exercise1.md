@@ -298,7 +298,7 @@ $ vim slurm_dice.job
 #!/bin/bash
 #SBATCH -N 1 #Number of nodes
 #SBATCH -n 1 #Number of "tasks"
-#SBATCH -p cloud #Run in the "cloud" partition
+#SBATCH -p small-cloud #Run in the "cloud" partition
 #SBATCH -o dice_test_%A.out #The %A refers to the slurm job ID, this is useful for distinguishing output files
 
 module purge
