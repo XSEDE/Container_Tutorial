@@ -5,7 +5,7 @@ First of all, the example files we'll be using are all available
 in `/opt/ohpc/pub/examples`.
 
 # Step 1: The Dockerfile
-To begin with, we've got a dockerfile similar to what you've
+To begin with, we have a dockerfile similar to what you've
 seen already available in:
 ```/opt/ohpc/pub/examples/ex1_docker.txt```
 
@@ -16,7 +16,7 @@ Create a work directory in your homedir:
 and cd into it:
 ```$ cd ~/ex1-workdir```
 
-now, make your own copy of the dockerfile mentioned above named `Dockerfile`:
+Now, make your own copy of the dockerfile mentioned above named `Dockerfile`:
 ```$ cp /opt/ohpc/pub/examples/ex1_docker.txt ~/ex1-workdir/Dockerfile```
 
 #### 1(b)
@@ -71,8 +71,15 @@ print("The lowest round was:",min(totals))
 ```
 
 #### 1(d)
-Now, you can build the image from the Dockerfile via the following
-command, but be sure to replace $USERNAME with you current username:
+
+Now, we can check which Docker images are built on the system with:
+```bash
+$ sudo docker images
+```
+
+We won't see many (if any) built images on the system, but we can change that by building
+ the image from the Dockerfile via the following command, but be sure to replace $USERNAME
+ with you current username:
 
 ```$ sudo docker build -t $USERNAME/py3-dice .```
 
@@ -94,9 +101,15 @@ Removing intermediate container a76788b898d7
 Successfully built d7bb6e1691d8
 ```
 
-To view the list of images available locally, run
-```
+If we check the list of built images, we can see our built image with:
+```bash
 $ sudo docker images
 ```
+
+We can check which containers are running locally with the following command:
+```bash
+$ sudo docker ps
+```
+However, this won't show any containers running because we have the luxury of an elastic HPC for this tutorial.
 
 [Continue to the convert exercise - Day1 Part2c](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1%20Part2c%20-%20Build-Convert-Run%20Exercise%20-%20Conversion.md)
