@@ -66,3 +66,5 @@ the collection you created earlier. **Case matters** for these names as well.
 **Be sure to replace USERNAME with your current username, so you don't conflict with any other 
 extant containers!**
 ```$ singularity push -U ex1.sif library://$GITHUB_USERNAME/$COLLECTION_NAME/$USERNAME-py3-dice:latest```
+
+[Continue to the run exercise - Day1 Part2b](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1%20Part2e%20-%20Build-Convert-Run%20Exercise%20-%20Running.md)
