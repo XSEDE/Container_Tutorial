@@ -1,7 +1,7 @@
-# Section 4 Exercise: 
+# Day 1, Part 2 Build-Convert-Run Exercise: 
 ## Build, Convert, and Run an HPC job with a Container
 
-# Overview
+# Overview and Login
 
 We're going to take one one of the Dockerfiles you've already seen, build the docker image, convert it to Singularity, and run a job using the Slurm job scheduler. 
 
@@ -17,7 +17,7 @@ You'll be using a virtual cluster in the Jetstream cloud for these exercises. Th
 Host name is: ***gw20.jetstream-cloud.org***
 
 -----
-*If you have not received your login information, please let us know via chat!*
+**If you have not received your login information, please let us know via chat!**
 =====
 
 First of all, the example files we'll be using are all available in `/opt/ohpc/pub/examples`.
