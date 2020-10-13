@@ -93,3 +93,6 @@ Most of this is the actual Docker-Singularity conversion taking place automatica
 Each layer of the Docker container is copied into a temporary space, 
 unpacked, the steps in the definition file are applied, and then the result is 
 packed in a SIF file.
+
+
+[Continue to the upload exercise - Day1 Part2b](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1%20Part2d%20-%20Build-Convert-Run%20Exercise%20-%20Upload.md)
