@@ -46,7 +46,11 @@ the current working directory. It's not possible to COPY or ADD files from
 The dice.py script will "roll" a pair of dice a certain number
 of times, and return some very basic information about the results:
 
-```$ cat /opt/ohpc/pub/examples/dice.py
+```bash
+$ cat /opt/ohpc/pub/examples/dice.py
+```
+
+```python3
 #!/usr/bin/env python3
 import random
 minimum = 1
