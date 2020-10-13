@@ -99,4 +99,4 @@ To view the list of images available locally, run
 $ sudo docker images
 ```
 
-[Continue to the convert exercise - Day1 Part2b](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1%20Part2c%20-%20Build-Convert-Run%20Exercise%20-%20Conversion.md)
+[Continue to the convert exercise - Day1 Part2c](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1%20Part2c%20-%20Build-Convert-Run%20Exercise%20-%20Conversion.md)
