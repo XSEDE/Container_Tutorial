@@ -3,7 +3,7 @@
 Ensure you can login to the build environment with your training account to the ip address <Insert ip address here>.
 
 ``` bash
-ssh train**@<Insert Ip address>
+ssh train**@149.165.157.56
 ```
 
 First, we can take a look at which container images are built:

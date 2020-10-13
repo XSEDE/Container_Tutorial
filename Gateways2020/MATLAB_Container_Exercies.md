@@ -1,6 +1,9 @@
 # MATLAB Container Build
 
 First ensure we can login to the MATLAB Licensed host.
+```bash
+ssh train**@149.165.170.239
+```
 
 Make a working directory:
 ``` bash
@@ -33,7 +36,12 @@ Or the compiled code can be found here, on the container host:
 cp // //
 ```
 
-Login back into the container host.  Then create and move into a new directory:
+Login back into the container host.  
+```bash
+ssh train**@149.165.157.56
+```
+
+Then create and move into a new directory:
 ```
 mkdir matlab-dir
 cd matlab-dir/
