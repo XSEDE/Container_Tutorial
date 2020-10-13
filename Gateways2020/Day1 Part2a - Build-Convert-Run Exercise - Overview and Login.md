@@ -21,3 +21,5 @@ Host name is: ***gw20.jetstream-cloud.org***
 =====
 
 First of all, the example files we'll be using are all available in `/opt/ohpc/pub/examples`.
+
+[Continue to the build exercise - Day1 Part2b](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1%20Part2b%20-%20Build-Convert-Run%20Exercise%20-%20Build%20and%20Convert.md)
