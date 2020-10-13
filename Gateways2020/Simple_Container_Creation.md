@@ -33,6 +33,7 @@ vi diceroll.py
 And add in the following code:
 
 ``` Python3
+#/usr/bin/env python3
 import random
 min = 1
 max = 6
@@ -44,7 +45,7 @@ while roll_again == "yes" or roll_again == "y":
     print ("The values are...")
     print (random.randint(min, max))
     print (random.randint(min, max))
-    roll_again = input("Roll the dice again?")
+    roll_again = input("Roll the dice again? (y/n)")
 ```
 
 Now, we need to create the Dockerfile, which is the recipe for the actual container.  Using your favorite editor, create a file named Dockerfile and add in the following:
