@@ -29,5 +29,10 @@ ssh train99@gw20.jetstream-cloud.org
 First of all, the example files we'll be using are all available in `/opt/ohpc/pub/examples`.
 
 If you've logged in, great! Feel free to look around while we ensure everyone has access to the system.
+Take a moment to try out the environment module system, via the 'module' command:
+```
+$ module avail
+$ module show singularity
+```
 
 [Continue to the build exercise - Day1 Part2b](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1%20Part2b%20-%20Build-Convert-Run%20Exercise%20-%20Docker%20Build.md)
