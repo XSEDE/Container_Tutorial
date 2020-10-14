@@ -19,7 +19,8 @@ Host name is: ***gw20.jetstream-cloud.org***
 Please login now via ssh, using your username and password provided via email!
 
 ``` bash
-ssh train99@gw20.jetstream-cloud.org```
+ssh train99@gw20.jetstream-cloud.org
+```
 
 -----
 **If you have not received your login information, please let us know via chat!**
