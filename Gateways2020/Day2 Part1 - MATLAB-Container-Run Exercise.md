@@ -1,18 +1,17 @@
-# MATLAB Container Build
+# Day 2, Part 1 MATLAB Container Build and Run
 
-First ensure we can login to the MATLAB Licensed host.
+First, ensure we can login to the MATLAB Licensed host.  This host is different from the host we used yesterday:
 ```bash
 ssh train**@149.165.170.239
 ```
 
-Make a working directory:
+Make a working directory for our MATLAB code:
 ``` bash
 mkdir workdir
 cd workdir/
 ```
 
-
-Then write some simple matlab code using your favorite editor.  Make sure when you name the file it ends in a ".m" or the MATLAB compiler won't be able to read the file.  Add in the following code:
+We are going to write some simple matlab code using your favorite editor.  Make sure when you name the file it ends in a ".m" or the MATLAB compiler won't be able to read the file.  Add in the following code:
 ```
 A = [1 2 3; 4 5 6; 7 8 9]
 A(:,:,2) = [10 11 12; 13 14 15; 16 17 18]
@@ -26,14 +25,16 @@ Then we can compile the code for the standalone MCR program:
 mcc -m mdimensionalArray.m
 ```
 
-Now copy the file over to <HOST IP>.
+Now we need to move the compiled code over to 149.165.157.56.
 ``` bash
-spc ./mdimensionalArray.m <Dockerhost IP>:/
+scp mdimensionalArray train**@149.165.157.56:~/
 ```
+
+*Notice we are only copying the compiled executable and NOT what we wrote!*
 
 Or the compiled code can be found here, on the container host:
 ``` bash
-cp // //
+cp /opt/ohpc/pub/examples/ ~/
 ```
 
 Login back into the container host.  
@@ -41,13 +42,19 @@ Login back into the container host.
 ssh train**@149.165.157.56
 ```
 
-Then create and move into a new directory:
+Then we can create a new directory and copy the file in it:
+```bash
+mkdir matlab-dir
+cp mdimensionalArray matlab-dir/
+```
+
+ Then we move into a new directory:
 ```
 mkdir matlab-dir
 cd matlab-dir/
 ```
 
-Edit a filed named `dockerfile` to have this:
+Create a file named `dockerfile` and include this:
 ```
 FROM centos:7
 
@@ -69,13 +76,15 @@ RUN chmod +x mdimensionalArray
 
 Build our container with the following:  *This WILL take some time!*
 ```bash
-docker build --tag <USERNAME>-mcr .
+docker build --tag train**-mcr .
 ```
-*Also, make sure you change <USERNAME> to your current username!*
+*Also, make sure you change train**-mcr to your current username!*
 
-While we build we can discuss/ask questions and go over what's in the dockerfile.
+While we build, we can answer questions and go over what's in the dockerfile.
 
 Once the build has completed, we can run our container:
 ``` bash
-docker run <USERNAME>-mcr ./mdimensionalArray
+docker run train**-mcr ./mdimensionalArray
 ```
+*Watch out for that tricky train**-mcr again!*
+
