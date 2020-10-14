@@ -18,7 +18,7 @@ A(:,:,2) = [10 11 12; 13 14 15; 16 17 18]
 B = cat(3,A,[3 2 1; 0 9 8; 5 3 7])
 ```
 
-_You can use alternative code if you would like, however we may not be able to debug it if something goes awry._
+__You can use alternative code if you would like, however we may not be able to debug it if something goes awry.__
 
 Then we can compile the code for the standalone MCR program:
 ``` bash
@@ -30,7 +30,7 @@ Now we need to move the compiled code over to 149.165.157.56.
 scp mdimensionalArray train**@149.165.157.56:~/
 ```
 
-_Notice we are only copying the compiled executable and NOT what we wrote!_
+__Notice we are only copying the compiled executable and NOT what we wrote!__
 
 Or the compiled code can be found here, on the container host:
 ``` bash
@@ -73,14 +73,14 @@ ENV XAPPLRESDIR=/usr/share/X11/app-defaults
 ADD mdimensionalArray /mdimensionalArray
 RUN chmod +x mdimensionalArray
 ```
-_If you used a different name for your MATLAB code, you will have to change it in the final line!_
+__If you used a different name for your MATLAB code, you will have to change it in the final line!__
 
 
 Build our container with the following:  *This WILL take some time!*
 ```bash
 docker build --tag train**-mcr .
 ```
-_Also, make sure you change train\*\*-mcr to your current username!_
+__Also, make sure you change train\*\*-mcr to your current username!__
 
 While we build, we can answer questions and go over what's in the dockerfile.
 
@@ -88,5 +88,5 @@ Once the build has completed, we can run our container:
 ``` bash
 docker run train**-mcr ./mdimensionalArray
 ```
-_Watch out for that tricky train\*\*-mcr again!_
+__Watch out for that tricky train\*\*-mcr again!__
 
