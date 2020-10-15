@@ -115,7 +115,7 @@ $ sudo docker ps
 ```
 However, this won't show any containers running yet.  To run this container, we can do:
 ```bash
-$ sudo docker run -i $USERNAME/py3-dice
+$ sudo docker run -i $USER/py3-dice
 ```
 
 This will prompt the question:
