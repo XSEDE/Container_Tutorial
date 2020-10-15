@@ -81,7 +81,7 @@ Now, we can check which Docker images are built on the system with:
 $ sudo docker images
 ```
 
-We won't see many (if any) built images on the system, but we can change that by building
+We won't see many built images on the system, but we can change that by building
  the image from the Dockerfile via the following command, but be sure to replace $USERNAME
  with you current username:
 
@@ -114,6 +114,21 @@ We can check which containers are running locally with the following command:
 ```bash
 $ sudo docker ps
 ```
-However, this won't show any containers running because we have the luxury of an elastic HPC for this tutorial.
+However, this won't show any containers running yet.  To run this container, we can do:
+```bash
+$ sudo docker run -i $USERNAME/py3-dice
+```
 
-[Continue to the convert exercise - Day1 Part2c](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1%20Part2c%20-%20Build-Convert-Run%20Exercise%20-%20Conversion.md)
+This will prompt the question:
+```
+How many times would you like to roll the dice?
+```
+
+Answer as many times as you would like and you will receive a response.  I will keep my container running so if you run:
+```bash
+$ sudo docker ps
+```
+
+You will see a list of running containers, some mine and some may be the other attendees.  
+
+[Continue to the convert exercise - Day1 Part2c](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1%20Ex%201%20Part%20C%20-%20Singularity%20Conversion.md)
