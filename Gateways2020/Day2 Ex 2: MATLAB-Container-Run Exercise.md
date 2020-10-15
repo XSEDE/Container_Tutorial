@@ -50,7 +50,6 @@ cp mdimensionalArray matlab-dir/
 
  Then we move into a new directory:
 ```
-mkdir matlab-dir
 cd matlab-dir/
 ```
 
@@ -60,12 +59,12 @@ FROM centos:7
 
 RUN mkdir /opt/mcr                     && \
 yum install wget unzip libXmu -y       && \
-mkdir /mcr-install                     && \
-cd /mcr-install                        && \
+mkdir ~/mcr-install                     && \
+cd ~/mcr-install                        && \
 cp /opt/ohpc/pub/examples/MCR_R2018a_glnxa64_installer.zip . && \
 unzip MCR_R2018a_glnxa64_installer.zip && \
 ./install -mode silent -agreeToLicense yes -destinationFolder /opt/mcr && \
-rm -Rf /mcr-install
+rm -Rf ~/mcr-install
 
 ENV LD_LIBRARY_PATH=/opt/mcr/v94/runtime/glnxa64:/opt/mcr/v94/bin/glnxa64:/opt/mcr/v94/sys/os/glnxa64:/opt/mcr/v94/extern/bin/glnxa64
 ENV XAPPLRESDIR=/usr/share/X11/app-defaults
@@ -73,7 +72,13 @@ ENV XAPPLRESDIR=/usr/share/X11/app-defaults
 ADD mdimensionalArray /mdimensionalArray
 RUN chmod +x mdimensionalArray
 ```
-__If you used a different name for your MATLAB code, you will have to change it in the final line!__
+
+Alternatively, you can copy the dockerfile from the shared directory:
+```bash
+cp /opt/ohpc/pub/examples/ex2_matlab.txt ~/matlab-dir/Dockerfile
+```
+
+__If you used a different name for your MATLAB code, you will have to change it in the final line of the Dockerfile!__
 
 
 Build our container with the following:  *This WILL take some time!*
@@ -88,5 +93,5 @@ Once the build has completed, we can run our container:
 ``` bash
 docker run train**-mcr ./mdimensionalArray
 ```
-__Watch out for that tricky train\*\*-mcr again!__
+__Watch out for that tricky train\*\*-mcr again! Also, watch the name of the file that was transfered into your container!__
 
