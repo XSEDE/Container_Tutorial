@@ -1,4 +1,4 @@
-# Day 1, Part 2 Build-Convert-Run Exercise: Upload to registry
+# Day 1, Ex 1 Part D: Upload to registry
 ## Build, Convert, and Run an HPC job with a Container
 
 # Step 3: Upload to a Registry
