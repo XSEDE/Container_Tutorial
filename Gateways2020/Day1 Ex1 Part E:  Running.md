@@ -1,4 +1,4 @@
-# Day 1, Part 2 Build-Convert-Run Exercise: Running
+# Day 1, Ex1 Part E: Running
 ## Build, Convert, and Run an HPC job with a Container
 
 # Step 4: Running a job
