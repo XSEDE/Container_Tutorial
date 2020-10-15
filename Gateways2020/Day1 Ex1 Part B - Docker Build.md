@@ -1,4 +1,4 @@
-# Day 1, Part 2 Build-Convert-Run Exercise: Build the container
+# Day 1, Part B: Docker Build
 ## Build, Convert, and Run an HPC job with a Container
 
 First of all, the example files we'll be using are all available
