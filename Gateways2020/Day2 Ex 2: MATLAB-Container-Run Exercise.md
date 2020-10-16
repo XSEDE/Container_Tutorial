@@ -11,7 +11,7 @@ mkdir workdir
 cd workdir/
 ```
 
-We are going to write some simple matlab code using your favorite editor.  Make sure when you name the file it ends in a ".m" or the MATLAB compiler won't be able to read the file.  Add in the following code:
+We are going to write some simple matlab code using your favorite editor.  For this tutorial, I will be using 'mdimensionalArray.m'.  Make sure when you name the file it ends in a ".m" or the MATLAB compiler won't be able to read the file.  Add in the following code:
 ```
 A = [1 2 3; 4 5 6; 7 8 9]
 A(:,:,2) = [10 11 12; 13 14 15; 16 17 18]
@@ -53,18 +53,31 @@ cp mdimensionalArray matlab-dir/
 cd matlab-dir/
 ```
 
-Create a file named `dockerfile` and include this:
+Let's copy a few files into our new directory.  First, let's grab the Dockerfile with:
+```bash
+cp /opt/ohpc/pub/examples/ex2_matlab.txt ~/matlab-dir/Dockerfile
+```
+
+Next, we need to copy over the MATLAB container runtime:
+```bash
+cp /opt/ohpc/pub/examples/MCR_R2018a_glnxa64_installer.zip ~/matlab-dir/mcr_installer.zip
+```
+
+Once we copy that, we can take a look at our Dockerfile with cat or less:
 ```
 FROM centos:7
 
-RUN mkdir /opt/mcr                     && \
-yum install wget unzip libXmu -y       && \
-mkdir ~/mcr-install                     && \
-cd ~/mcr-install                        && \
-cp /opt/ohpc/pub/examples/MCR_R2018a_glnxa64_installer.zip . && \
-unzip MCR_R2018a_glnxa64_installer.zip && \
+RUN mkdir /opt/mcr                      && \
+yum install wget unzip libXmu -y        && \
+mkdir /mcr-install
+
+ADD MCR_R2018a_glnxa64_installer.zip /mcr-install/MCR_installer.zip
+
+RUN cd /mcr-install && \
+ls -l && pwd && \
+unzip MCR_installer.zip    && \
 ./install -mode silent -agreeToLicense yes -destinationFolder /opt/mcr && \
-rm -Rf ~/mcr-install
+rm -Rf /mcr-install
 
 ENV LD_LIBRARY_PATH=/opt/mcr/v94/runtime/glnxa64:/opt/mcr/v94/bin/glnxa64:/opt/mcr/v94/sys/os/glnxa64:/opt/mcr/v94/extern/bin/glnxa64
 ENV XAPPLRESDIR=/usr/share/X11/app-defaults
