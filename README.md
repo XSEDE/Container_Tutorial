@@ -22,7 +22,7 @@ The tutorial was presented at Gateways 2020 as a full day (~8 hrs) in total spli
 
 ### Day 1
 #### Part 1 (1 hr 30 min)
-1. **Introduction to Containers** by [Jeremy Fischer](https://github.com/jlf599), Indiana University
+1. [**Introduction to Containers**](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1_1_Introduction-to-Containers.pdf) by [Jeremy Fischer](https://github.com/jlf599), Indiana University
     * Discussion of how containers can help Gateways
     * What is Docker?
     * Docker Hub
@@ -48,7 +48,7 @@ The tutorial was presented at Gateways 2020 as a full day (~8 hrs) in total spli
     * Creating Singularity containers (from scratch)
     * Singularity user environment
 
-6. **Docker To Singularity Conversion** by [Peter Vaillancourt](https://github.com/sk8forether), Cornell University
+6. [**Docker To Singularity Conversion**](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1_6_DockerToSingularity.pdf) by [Peter Vaillancourt](https://github.com/sk8forether), Cornell University
     * Best Practices for conversion
     * Example conversion
 
@@ -68,11 +68,12 @@ The tutorial was presented at Gateways 2020 as a full day (~8 hrs) in total spli
 1. **Open Q&A** by [Jeremy Fischer](https://github.com/jlf599), Indiana University
     * Catchup and unresolved questions
 
-2. **Exercise - Complex Container Build (MCRE)** by [Stephen Bird](https://github.com/stebird), Indiana University
-    * Dockerfile walkthrough
+2. [**Exercise - MATLAB Container Build**](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day2_2_MATLAB_Container_Build.pdf) by [Stephen Bird](https://github.com/stebird), Indiana University
+    * [Dockerfile](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/MCR_Dockerfile) walkthrough
+    * [Container build and run](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day2%20Ex%202:%20MATLAB-Container-Run%20Exercise.md)
     * Conversion
 
-3. **Best Practices and Advanced Topics** by [Peter Vaillancourt](https://github.com/sk8forether), Cornell University
+3. [**Best Practices & Advanced Topics**](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day2_3_AdvancedTopics.pdf) by [Peter Vaillancourt](https://github.com/sk8forether), Cornell University
     * Lifecycle of Containers
     * Development vs. Production
     * Reducing container sizes
