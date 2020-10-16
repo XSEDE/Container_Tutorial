@@ -82,10 +82,9 @@ $ sudo docker images
 ```
 
 We won't see many built images on the system, but we can change that by building
- the image from the Dockerfile via the following command, but be sure to replace $USERNAME
- with you current username:
+ the image from the Dockerfile via the following command:
 
-```$ sudo docker build -t $USERNAME/py3-dice .```
+```$ sudo docker build -t $USER/py3-dice .```
 
 Which should generate output similar to:
 ```
@@ -116,7 +115,7 @@ $ sudo docker ps
 ```
 However, this won't show any containers running yet.  To run this container, we can do:
 ```bash
-$ sudo docker run -i $USERNAME/py3-dice
+$ sudo docker run -i $USER/py3-dice
 ```
 
 This will prompt the question:
