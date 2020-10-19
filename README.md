@@ -34,7 +34,7 @@ The tutorial was presented at Gateways 2020 as a full day (~8 hrs) in total spli
     * Distributed login credentials for tutorial resources (not available outside of conference attendance)
     * Overview of container development environment
 
-3. **Simple (Docker) Container Creation** by [Sanjana Sudarshan](https://github.com/sanjanasudarshan), Indiana University
+3. [**Simple (Docker) Container Creation**](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day_1_3_Simple_Container_Creation.pdf) by [Sanjana Sudarshan](https://github.com/sanjanasudarshan), Indiana University
     * Build via Dockerfile
     * Exploring Dockerfile structure/conventions
     * Container examples
