@@ -43,7 +43,7 @@ The tutorial was presented at Gateways 2020 as a full day (~8 hrs) in total spli
     * Build simple Docker container
 
 #### Part 2 (1 hr 30 min)
-5. **Singularity Containers** by [Eric Coulter](https://github.com/ECoulter), Indiana University
+5. [**Singularity Containers**](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day_1_5_Singularity_Overview.pdf) by [Eric Coulter](https://github.com/ECoulter), Indiana University
     * Definition Files
     * Creating Singularity containers (from scratch)
     * Singularity user environment
