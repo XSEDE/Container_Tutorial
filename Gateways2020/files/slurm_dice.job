@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH -N 1 #Number of nodes
+#SBATCH -n 1 #Number of "tasks"
+#SBATCH -p small-cloud #Run in the "cloud" partition
+#SBATCH -o dice_test_%A.out #The %A refers to the slurm job ID, this is useful for distinguishing output files
+
+module purge
+module load gnu
+module load openmpi
+module load singularity
+
+USERNAME="ECoulter"
+COLLECTION_NAME="tutorial-containers"
+
+singularity remote list
+singularity remote add --no-login TutorialSRegistry https://tutorial.jetstream-cloud.org
+singularity remote use TutorialSRegistry
+
+singularity run library://${USERNAME}/${COLLECTION_NAME}/py3-dice-example:latest 10
