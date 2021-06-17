@@ -1,0 +1,16 @@
+Bootstrap: docker-daemon
+From: $USERNAME/py3-dice:latest
+# BE SURE TO REPLACE THE ABOVE WITH YOUR USERNAME AND IMAGE NAME
+
+%post
+
+  chmod 755 /usr/src/app/dice.py
+
+%runscript
+#This allows us to pass the number of runs as an argument in the
+# slurm script.
+  echo ${1} | /usr/src/app/dice.py
+
+%help
+ This container will run a python script that simulates some
+ number of dice rolls.
