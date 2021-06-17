@@ -20,8 +20,8 @@ $ vim slurm_dice.job
 #SBATCH -o dice_test_%A.out #The %A refers to the slurm job ID, this is useful for distinguishing output files
 
 module purge
-module load gnu
-module load openmpi
+module load gnu9
+module load openmpi4
 module load singularity
 
 singularity run ex1.sif 10
