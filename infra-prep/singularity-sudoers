@@ -1,0 +1,3 @@
+Cmnd_Alias SINGULARITY = /opt/ohpc/pub/libs/singularity/3.7.1/bin/singularity, /usr/bin/singularity
+
+%docker  ALL=(ALL)   NOPASSWD: SETENV: SINGULARITY
