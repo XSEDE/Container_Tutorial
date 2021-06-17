@@ -14,12 +14,12 @@ Jetstream-local instance of the Singularity Registry (the software underlying S-
 
 You'll be using a virtual cluster in the Jetstream cloud for these exercises. This is a multi-user system, so please be careful!
 
-Host name is: ***gw20.jetstream-cloud.org***
+Host name is: ***sgci21-contut.jetstream-cloud.org***
 
 Please login now via ssh, using your username and password provided via email!
 
 ``` bash
-ssh train99@gw20.jetstream-cloud.org
+ssh train99@sgci21-contut.jetstream-cloud.org
 ```
 
 -----
