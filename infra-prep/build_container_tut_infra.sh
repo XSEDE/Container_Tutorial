@@ -10,9 +10,9 @@
 
 echo 'Creating Container Tutorial infrasturcture with hardcoded values!'
 
-openrc_path="/home/jecoulte/Work/Tools/Jetstream_cli/openrc-files/openrc-staff.sh"
+openrc_path="<path-to-your-openrc-file>"
 
-cluster_name="jec-tuttest"
+cluster_name="tutorial-test"
 volume_size=5
 headnode_size="m1.small"
 
