@@ -33,4 +33,4 @@ $ module avail
 $ module show singularity
 ```
 
-[Continue to the build exercise - Day1 Part2b](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1%20Ex%201%20Part%20B%20-%20Docker%20Build.md)
+[Continue to the build exercise - Ex 1 Part B](https://github.com/XSEDE/Container_Tutorial/blob/main/SGCI2021/Ex%201%20Part%20B%20-%20Docker%20Build.md)
