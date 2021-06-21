@@ -130,4 +130,4 @@ $ docker ps
 
 You will see a list of running containers, some mine and some may be the other attendees.  
 
-[Continue to the convert exercise - Day1 Part2c](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1%20Ex%201%20Part%20C%20-%20Singularity%20Conversion.md)
+[Continue to the convert exercise - Ex1 PartC](https://github.com/XSEDE/Container_Tutorial/blob/main/SGCI2021/Ex%201%20Part%20C%20-%20Singularity%20Conversion.md)
