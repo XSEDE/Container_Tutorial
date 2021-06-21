@@ -1,12 +1,10 @@
-# Day 1, Part 2 Build-Convert-Run Exercise: 
+# Build-Convert-Run Exercise: 
 ## Build, Convert, and Run an HPC job with a Container
 
 # Overview and Login
 
 We're going to take one one of the Dockerfiles you've already seen, build the docker image, convert it to Singularity, and run a job using the Slurm job scheduler. 
 
-We will also walk through the workflow needed to authenticate to and use a remote container registry - this will be basically the  same as what's used on DockerHub and Singularity-Hub.  It is also similar to the Sylabs cloud repository, but we'll be using a 
-Jetstream-local instance of the Singularity Registry (the software underlying S-Hub).
 
 **PLEASE NOTE**: The instructor will be using vim for any file editing that needs to be done - you may also use nano. 
 
