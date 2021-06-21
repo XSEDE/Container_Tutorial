@@ -1,9 +1,9 @@
-# Day 1, Ex1 Part E: Running
+# DEx1 Part E: Running
 ## Build, Convert, and Run an HPC job with a Container
 
 # Step 4: Running a job
 
-Now, we're going to walk through using our container **from the registry** with an
+Now, we're going to walk through using our container **from the local filesystem** with an
 HPC job scheduler, Slurm. We'll submit a batch job file to the scheduler, watch the
 job run, and view the output files - this workflow is basically what happens on the
 background when using a science gateway.
