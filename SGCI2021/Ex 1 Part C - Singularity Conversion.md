@@ -1,4 +1,4 @@
-# Day 1, Ex 1 Part C: Conversion to Singularity
+# Ex 1 Part C: Conversion to Singularity
 ## Build, Convert, and Run an HPC job with a Container
 
 
