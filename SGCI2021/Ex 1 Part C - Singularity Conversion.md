@@ -95,4 +95,4 @@ unpacked, the steps in the definition file are applied, and then the result is
 packed in a SIF file.
 
 
-[Continue to the upload exercise - Day1 Part2E](https://github.com/XSEDE/Container_Tutorial/blob/master/SGCI2021/Day1%20Ex%201%20Part%20E:%20%20Upload.md)
+[Continue to the upload exercise - Part2D](https://github.com/XSEDE/Container_Tutorial/blob/main/SGCI2021/Day1%20Ex%201%20Part%20E:%20%20Running.md)
