@@ -17,7 +17,7 @@ Host name is: ***sgci21-contut.jetstream-cloud.org***
 Please login now via ssh, using your username and password provided via email!
 
 ``` bash
-ssh train99@sgci21-contut.jetstream-cloud.org
+ssh trainXX@sgci21-contut.jetstream-cloud.org
 ```
 
 -----
