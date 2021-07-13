@@ -12,6 +12,7 @@ We use a few conventions throught these exercises that are important to keep
 in mind while reading here. Lines that begin with a ```$``` denote a command to be run
 on the remote system, like
 ```$ whoami```
+This is common when indicating a shell prompt on a Linux-based machine.
 
 Output will sometimes follow these!
 
@@ -30,7 +31,7 @@ Host name is: ***pearc21-contut.jetstream-cloud.org***
 Please login now via ssh, using your username and password provided via email!
 
 ``` bash
-ssh train99@sgci21-contut.jetstream-cloud.org
+ssh <USERNAME>@sgci21-contut.jetstream-cloud.org
 ```
 
 -----
