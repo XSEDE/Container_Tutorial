@@ -31,7 +31,7 @@ Host name is: ***pearc21-contut.jetstream-cloud.org***
 Please login now via ssh, using your username and password provided via email!
 
 ``` bash
-ssh <USERNAME>@sgci21-contut.jetstream-cloud.org
+ssh <USERNAME>@pearc21-contut.jetstream-cloud.org
 ```
 
 -----
