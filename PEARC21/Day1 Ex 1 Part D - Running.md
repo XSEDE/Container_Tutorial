@@ -1,4 +1,4 @@
-# Day 1, Ex1 Part E: Running
+# Day 1, Ex1 Part D: Running
 ## Build, Convert, and Run an HPC job with a Container
 
 # Step 4: Running a job
