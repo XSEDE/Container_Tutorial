@@ -1,4 +1,4 @@
-# Day 1, Part B: Docker Build
+# Day 1, Ex 1 Part B: Docker Build
 ## Build, Convert, and Run an HPC job with a Container
 
 First of all, the example files we'll be using are all available
@@ -190,4 +190,4 @@ This will create a file in your current directory - you can transfer it to your
 local machine by running the following:
 ```scp <USER>@pearc21-contut.jetstream-cloud.org:ex1-workdir/mandle-zoom-py/test.gif ./```
 
-[Continue to the convert exercise - Day1 Part2c](https://github.com/XSEDE/Container_Tutorial/blob/master/Gateways2020/Day1%20Ex%201%20Part%20C%20-%20Singularity%20Conversion.md)
+[Continue to the convert exercise - Day1 Part C](https://github.com/XSEDE/Container_Tutorial/blob/main/PEARC21/Day1%20Ex%201%20Part%20C%20-%20Singularity%20Conversion.md)
