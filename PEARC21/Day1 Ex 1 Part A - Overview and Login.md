@@ -1,4 +1,4 @@
-# Day 1, Part 2 Build-Convert-Run Exercise: 
+# Day 1, Ex 1 Part A Build-Convert-Run Exercise: 
 ## Build, Convert, and Run an HPC job with a Container
 
 # Overview and Login
@@ -46,4 +46,4 @@ $ module avail
 $ module show singularity
 ```
 
-[Continue to the build exercise - Day1 Part2b](https://github.com/XSEDE/Container_Tutorial/blob/master/PEARC21/Day1%20Ex%201%20Part%20B%20-%20Docker%20Build.md)
+[Continue to the build exercise - Day1 Part B](https://github.com/XSEDE/Container_Tutorial/blob/main/PEARC21/Day1%20Ex%201%20Part%20B%20-%20Docker%20Build.md)
