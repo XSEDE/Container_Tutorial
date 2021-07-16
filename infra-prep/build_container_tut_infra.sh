@@ -63,6 +63,9 @@ ssh centos@${cluster_ip} 'cat user_list.txt | sudo chpasswd'
 scp singularity-sudoers centos@${cluster_ip}:
 ssh centos@${cluster_ip} 'sudo cp singularity-sudoers /etc/sudoers.d/'
 
+#Allow ssh access for users
+ssh centos@${cluster_ip} "sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config && sudo systemctl restart sshd"
+
 # Copy over files used in the exercises
 ssh centos@${cluster_ip} 'sudo mkdir -p -m 777 /opt/ohpc/pub/examples'
 scp ../${current_tutorial}/files/* centos@${cluster_ip}:/opt/ohpc/pub/examples/
