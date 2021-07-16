@@ -9,10 +9,10 @@ job run, and view the output files - this workflow is basically what happens on 
 background when using a science gateway.
 
 #### 4(a)
-Please make a local copy of the Slurm example job file and open in an editor:
+Please make a local copy of the Slurm example job file and examine the contents:
 ```
 $ cp /opt/ohpc/pub/examples/mandle-zoom.job ~/ex1-workdir
-$ vim mandle-zoom.job
+$ cat mandle-zoom.job
 #!/bin/bash
 #SBATCH -N 1 #Number of nodes
 #SBATCH -n 4 #Number of "tasks"
