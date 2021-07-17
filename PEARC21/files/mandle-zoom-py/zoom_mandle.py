@@ -32,7 +32,7 @@ def main():
   parser=argparse.ArgumentParser()
   parser.add_argument("output_file",type=str,help="Output filename - in GIF format",default="newzoom.gif")
   parser.add_argument("-n","--nprocs",type=int,help="Number of multiprocessing threads to spawn",action="store",default=2)
-  parser.add_argument("-d","--dur",type=int,help="Duration of GIF in microseconds",action="store",default=100)
+  parser.add_argument("-d","--dur",type=int,help="Frame speed of GIF in microseconds",action="store",default=100)
   parser.add_argument("-s","--nsteps",type=int,help="Number of steps in the zoom",action="store",default=2)
   parser.add_argument("-w","--swin",type=float,help="Size of the starting frame",action="store",default=2)
   parser.add_argument("-f","--fwin",type=float,help="Size of the ending frame",action="store",default=0.005)

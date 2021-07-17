@@ -147,7 +147,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -n NPROCS, --nprocs NPROCS
                         Number of multiprocessing threads to spawn
-  -d DUR, --dur DUR     Duration of GIF in microseconds
+  -d DUR, --dur DUR     Frame speed of GIF in microseconds
   -s NSTEPS, --nsteps NSTEPS
                         Number of steps in the zoom
   -w SWIN, --swin SWIN  Size of the starting frame
