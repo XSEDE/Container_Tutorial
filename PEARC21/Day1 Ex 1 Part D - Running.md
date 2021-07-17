@@ -23,7 +23,7 @@ module purge
 module load gnu9
 module load singularity
 
-singularity run ./mandle-zoom-py/mandle.sif ./zoom.gif
+singularity run ./mandle-zoom-py/mandle.sif -n 4 -d 50 -s 20 -w 2 -f 0.05 ./better_zoom.gif
 ...
 ```
 
@@ -77,7 +77,12 @@ be loaded in your job environment.
 #### 4(d)
 You should see a gif file in your current directory!
 ```$ ls 
-mandle_2.out  mandle-zoom.job  mandle-zoom-py  zoom.gif
+mandle_2.out  mandle-zoom.job  mandle-zoom-py  better_zoom.gif
 ```
 
-Feel free to try again with different parameters, etc. 
+Feel free to try again with different parameters! 
+The default origin of the zoom is at (-1.4011552,0) - interesting
+features can also be seen at (0.444,0.374) or (0.24,0). 
+It might be worth increasing the number of frames or changing the speed as well!
+The current cluster only uses 4 cores on each compute node, so increasing 
+the number of cores is not a viable option at the moment.

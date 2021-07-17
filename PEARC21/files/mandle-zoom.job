@@ -8,4 +8,4 @@ module purge
 module load gnu9
 module load singularity
 
-singularity run ./mandle-zoom-py/mandle.sif ./zoom.gif
+singularity run ./mandle-zoom-py/mandle.sif -n 4 -d 50 -s 20 -w 2 -f 0.05 ./better_zoom.gif
