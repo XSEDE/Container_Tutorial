@@ -160,7 +160,7 @@ For now, we'll just use the default arguments for the app, and supply an output 
 to verify that things are working:
 
 ```
-docker run -u $(id -u):$(id -g) -v ${PWD}:${PWD} --rm true train99:mandle-zoom ${PWD}/test.gif
+docker run -u $(id -u):$(id -g) -v ${PWD}:${PWD} --rm=true train99:mandle-zoom ${PWD}/test.gif
 ```
 
 While that's running (should take only 30 seconds or so), take a moment to look 
