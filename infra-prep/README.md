@@ -1,4 +1,4 @@
-#Infrastructure Preparation
+# Infrastructure Preparation
 
 The scripts in this directory are used to create the infrastructure needed for this 
 tutorial.
