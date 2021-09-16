@@ -26,12 +26,12 @@ the remote system with when running the command!
 
 You'll be using a virtual cluster in the Jetstream cloud for these exercises. This is a multi-user system, so please be careful!
 
-Host name is: ***pearc21-contut.jetstream-cloud.org***
+Host name is: ***escience-contut.jetstream-cloud.org***
 
 Please login now via ssh, using your username and password provided via email!
 
 ``` bash
-ssh <USERNAME>@pearc21-contut.jetstream-cloud.org
+ssh <USERNAME>@escience-contut.jetstream-cloud.org
 ```
 
 -----
