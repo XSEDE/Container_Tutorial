@@ -4,14 +4,14 @@
 First of all, the example files we'll be using are all available
 in `/opt/ohpc/pub/examples`.
 
-We''l be building an app that creates a gif file showing a 'zoom in' along a 
+We'll be building an app that creates a gif file showing a 'zoom in' along a 
 straight trajectory of the Mandlebrot set plotted in black and white.
 Once we've built the container, we'll take a look at how to actually use the app.
 
 # Step 1: The Dockerfile
 This particular example will use a local git repository with built-in 
 Dockerfile to build a simple container. The repository is available at
-```/opt/oh/c/pub/exampled/mandle-zoom-py```
+```/opt/ohpc/pub/exampled/mandle-zoom-py```
 
 #### 1(a) - Create a local repo
 Create a work directory in your homedir:
