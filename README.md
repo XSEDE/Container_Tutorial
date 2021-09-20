@@ -3,13 +3,13 @@
 This repository contains a collection of slides, exercises, and files for the Container Tutorial presented at various conferences and other venues.  Below is an abstract of what the Tutorial covers.  A directory exists for most events we have presented at with slides and exercises.  Some descriptions of how we have structured the tutorial at each event are included in the corresponding READMEs.  With each presentation, we have taken feedback and followed industry trends to improve the tutorial.
 
 ### Previously Presented At
+* [eScience 2021](https://github.com/XSEDE/Container_Tutorial/tree/main/eScience2021) - Virtual, September 20 2021, 1pm CEST
 * [PEARC21](https://github.com/XSEDE/Container_Tutorial/tree/main/PEARC21)
 * [Gateways 2020](https://github.com/XSEDE/Container_Tutorial/tree/main/Gateways2020)
 * [PEARC20](https://github.com/XSEDE/Container_Tutorial/tree/main/PEARC20)
 * SGCI Coding Institute 2020 and [2021](https://github.com/XSEDE/Container_Tutorial/tree/main/SGCI2021)
 
 ### Upcoming Accepted Presentations
-* [eScience 2021](https://github.com/XSEDE/Container_Tutorial/tree/main/eScience2021) - Virtual, September 20 2021, 1pm CEST
 * [SC21](https://github.com/XSEDE/Container_Tutorial/tree/main/SC21) - In-person, November 15 2021, 8am - 5pm CST
 
 ## Abstract
