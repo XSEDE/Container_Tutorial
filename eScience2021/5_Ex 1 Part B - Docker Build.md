@@ -190,4 +190,4 @@ local machine by running the following:
 
 ```scp <USER>@escience-contut.jetstream-cloud.org:ex1-workdir/mandle-zoom-py/test.gif ./```
 
-[Continue to the convert exercise - Day1 Part C](https://github.com/XSEDE/Container_Tutorial/blob/main/eScience2021/Day1%20Ex%201%20Part%20C%20-%20Singularity%20Conversion.md)
+[Continue to the convert exercise - Day1 Part C](https://github.com/XSEDE/Container_Tutorial/blob/main/eScience2021/7_Ex%201%20Part%20C%20-%20Singularity%20Conversion.md)
