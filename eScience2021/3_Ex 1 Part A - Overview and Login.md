@@ -47,4 +47,4 @@ $ module avail
 $ module show singularity
 ```
 
-[Continue to the build exercise - Day1 Part B](https://github.com/XSEDE/Container_Tutorial/blob/main/eScience2021/Day1%20Ex%201%20Part%20B%20-%20Docker%20Build.md)
+[Continue to the build exercise - Day1 Part B](https://github.com/XSEDE/Container_Tutorial/blob/main/eScience2021/5_Ex%201%20Part%20B%20-%20Docker%20Build.md)
