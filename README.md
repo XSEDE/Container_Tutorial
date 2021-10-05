@@ -5,7 +5,7 @@ The XSEDE Container Tutorial is presented by the XSEDE Cyberinfrastructure Resou
 * [SC21](https://github.com/XSEDE/Container_Tutorial/tree/main/SC21) - In-person, November 15 2021, 8am - 5pm CST
 
 ## Previously Presented At
-* [eScience 2021](https://github.com/XSEDE/Container_Tutorial/tree/main/eScience2021) - Virtual, September 20 2021, 1pm CEST
+* [eScience 2021](https://github.com/XSEDE/Container_Tutorial/tree/main/eScience2021)
 * [PEARC21](https://github.com/XSEDE/Container_Tutorial/tree/main/PEARC21)
 * [Gateways 2020](https://github.com/XSEDE/Container_Tutorial/tree/main/Gateways2020)
 * [PEARC20](https://github.com/XSEDE/Container_Tutorial/tree/main/PEARC20)
