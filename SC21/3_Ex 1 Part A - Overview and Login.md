@@ -22,13 +22,19 @@ this means YOU need to replace this with the username you use to login to
 the remote system with when running the command!
 ```$ echo "I am <USERNAME>"```
 
+## Usernames
+
+Please go to 
+
+```https://bit.ly/3CgeoKv```
+
+to select your username!
+
 ## The Infrastructure
 
 You'll be using a virtual cluster in the Jetstream cloud for these exercises. This is a multi-user system, so please be careful!
 
 Host name is: ***sc21-contut.jetstream-cloud.org***
-
-Please login now via ssh, using your username and password provided via email!
 
 ``` bash
 ssh <USERNAME>@sc21-contut.jetstream-cloud.org
