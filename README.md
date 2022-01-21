@@ -8,6 +8,7 @@ Currently submitting tutorials for 2022.  Stay tuned...
 * [SC21](https://github.com/XSEDE/Container_Tutorial/tree/main/SC21) - In-person, November 15 2021, 8am - 5pm CST (Full-day)
 * [eScience 2021](https://github.com/XSEDE/Container_Tutorial/tree/main/eScience2021) - Virtual, full-day, [Video](https://youtu.be/mPnrgWjW2jY)
 * [PEARC21](https://github.com/XSEDE/Container_Tutorial/tree/main/PEARC21) - Virtual, full-day
+* CaRCC Researcher-Facing Track Call, Feb 2021 - Virtual, abbridged version, [Video](https://youtu.be/TpWrOYS7nh0)
 * [Gateways 2020](https://github.com/XSEDE/Container_Tutorial/tree/main/Gateways2020) - Virtual, 2 half-day sessions
 * [PEARC20](https://github.com/XSEDE/Container_Tutorial/tree/main/PEARC20) - Virtual, half-day
 * SGCI Coding Institute 2020 and [2021](https://github.com/XSEDE/Container_Tutorial/tree/main/SGCI2021) - Virtual, half-day
