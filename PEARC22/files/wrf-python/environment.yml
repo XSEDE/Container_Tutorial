@@ -1,0 +1,10 @@
+ name: wrfpython
+ channels:
+   - conda-forge
+ dependencies:
+   - python>=3.6,<3.10
+   - matplotlib
+   - netcdf4
+   - cartopy
+   - wrf-python
+   - xarray

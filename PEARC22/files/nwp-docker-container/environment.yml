@@ -1,0 +1,18 @@
+ name: containergateway
+ channels:
+   - conda-forge
+ dependencies:
+   - python>=3.6,<3.8
+   - numpy
+   - matplotlib
+   - cartopy
+   - metpy
+   - siphon
+   - pandas
+   - pip
+   - xarray
+   - ffmpeg
+   - boto3
+   - botocore
+   - pip:
+      - python-awips
