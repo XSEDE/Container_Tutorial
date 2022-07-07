@@ -45,7 +45,11 @@ Dockerfile      parallel_mandle.py  zoom_mandle.py Mandle.def      README.md
 Examine the contents:
 ```bash
 $ cd ~/ex1-workdir
+```
+```
 $ cat ./Dockerfile
+```
+```
 #Using a slim Debian base image tagged at a specific date
 FROM debian:buster-20210621-slim
 
@@ -152,6 +156,8 @@ However, this won't show any containers running yet.  To run this container, we 
 the following to view help for the application:
 ```bash
 $ docker run $USER:mandle-zoom
+```
+```
 usage: zoom_mandle.py [-h] [-n NPROCS] [-d DUR] [-s NSTEPS] [-w SWIN]
                       [-f FWIN] [-o ORIGIN ORIGIN]
                       output_file
