@@ -135,7 +135,7 @@ $ docker ps
 However, this won't show any containers running yet.  To run this container, we can use 
 the following to view help for the application:
 ```bash
-$ docker run <USER>:mandle-zoom
+$ docker run $USER:mandle-zoom
 usage: zoom_mandle.py [-h] [-n NPROCS] [-d DUR] [-s NSTEPS] [-w SWIN]
                       [-f FWIN] [-o ORIGIN ORIGIN]
                       output_file
