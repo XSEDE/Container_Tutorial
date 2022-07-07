@@ -17,22 +17,26 @@ Dockerfile to build a simple container. The repository is available at
 #### 1(a) - Create a local repo
 Create a work directory in your homedir:
 ```bash
-$ mkdir ~/ex1-workdir```
+$ mkdir ~/ex1-workdir
+```
 
 and cd into it:
 
 ```bash
-$ cd ~/ex1-workdir```
+$ cd ~/ex1-workdir
+```
 
 Now, make your own copy of the git repository:
 
 ```bash
-$ git clone /opt/ohpc/pub/examples/mandle-zoom-py```
+$ git clone /opt/ohpc/pub/examples/mandle-zoom-py
+```
 
 Move into your local copy of the repository and examine the contents:
 
 ```bash
-$ cd ./mandle-zoom-py && ls ```
+$ cd ./mandle-zoom-py && ls 
+```
 ```
 Dockerfile      parallel_mandle.py  zoom_mandle.py Mandle.def      README.md
 ```
@@ -92,7 +96,8 @@ We won't see many built images on the system, but we can change that by building
  the image from the Dockerfile via the following command:
 
 ```bash
-$ docker build -t $USER:mandle-zoom .```
+$ docker build -t $USER:mandle-zoom .
+```
 
 The build should take around 3-4 minutes, and generate quite a bit of output.
 The final output should appear something like the following:
