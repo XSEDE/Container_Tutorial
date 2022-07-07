@@ -1,8 +1,9 @@
 # Day 1, Ex 1 Part B: Docker Build
 ## Build, Convert, and Run an HPC job with a Container
 
-First of all, the example files we'll be using are all available
-in `/opt/ohpc/pub/examples`.
+The example files we'll be using are all available
+in `/opt/ohpc/pub/examples`.  We will be cloning the 
+mandle-zoom-py directory with git in a moment.
 
 We'll be building an app that creates a gif file showing a 'zoom in' along a 
 straight trajectory of the Mandlebrot set plotted in black and white.
@@ -160,7 +161,7 @@ For now, we'll just use the default arguments for the app, and supply an output 
 to verify that things are working:
 
 ```
-docker run -u $(id -u):$(id -g) -v ${PWD}:${PWD} --rm=true <USER>:mandle-zoom -s 1 -d 1000 ${PWD}/test.gif
+docker run -u $(id -u):$(id -g) -v ${PWD}:${PWD} --rm=true $USER:mandle-zoom -s 1 -d 1000 ${PWD}/test.gif
 ```
 
 While that's running (should take only 30 seconds or so), take a moment to look 
