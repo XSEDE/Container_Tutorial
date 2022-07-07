@@ -16,22 +16,31 @@ Dockerfile to build a simple container. The repository is available at
 
 #### 1(a) - Create a local repo
 Create a work directory in your homedir:
-```$ mkdir ~/ex1-workdir```
+```bash
+$ mkdir ~/ex1-workdir```
 
 and cd into it:
-```$ cd ~/ex1-workdir```
+
+```bash
+$ cd ~/ex1-workdir```
 
 Now, make your own copy of the git repository:
-```$ git clone /opt/ohpc/pub/examples/mandle-zoom-py```
+
+```bash
+$ git clone /opt/ohpc/pub/examples/mandle-zoom-py```
 
 Move into your local copy of the repository and examine the contents:
-```$ cd ./mandle-zoom-py && ls 
+
+```bash
+$ cd ./mandle-zoom-py && ls ```
+```
 Dockerfile      parallel_mandle.py  zoom_mandle.py Mandle.def      README.md
 ```
 
 #### 1(b) - Examine the Dockerfile
 Examine the contents:
-```$ cd ~/ex1-workdir
+```bash
+$ cd ~/ex1-workdir
 $ cat ./Dockerfile
 #Using a slim Debian base image tagged at a specific date
 FROM debian:buster-20210621-slim
@@ -82,7 +91,8 @@ $ docker images
 We won't see many built images on the system, but we can change that by building
  the image from the Dockerfile via the following command:
 
-```$ docker build -t $USER:mandle-zoom .```
+```bash
+$ docker build -t $USER:mandle-zoom .```
 
 The build should take around 3-4 minutes, and generate quite a bit of output.
 The final output should appear something like the following:
@@ -160,7 +170,7 @@ optional arguments:
 For now, we'll just use the default arguments for the app, and supply an output filename
 to verify that things are working:
 
-```
+```bash
 docker run -u $(id -u):$(id -g) -v ${PWD}:${PWD} --rm=true $USER:mandle-zoom -s 1 -d 1000 ${PWD}/test.gif
 ```
 
