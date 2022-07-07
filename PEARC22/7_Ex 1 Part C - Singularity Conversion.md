@@ -8,7 +8,9 @@ HPC environment.
 
 #### 2(a)
 First, load the `singularity` module:
-```$ module load singularity```
+```bash
+$ module load singularity
+```
 
 This will give your shell session access to the Singularity executable, etc.
 We're going to convert by simply including the Docker image
@@ -20,9 +22,11 @@ for cases where it's necessary to modify the environment further.
 In your local copy of the mandle-zoom-py repo, you may have noticed a file
 earlier called ```Mandle.def``` 
 Take a look in an editor:
-```
+```bash
 $ cd ~/ex1-workdir/mandle-zoom-py
 $ vim ./Mandle.def
+```
+```
 BootStrap: docker
 From: library/debian:buster-20210621-slim
 
@@ -70,7 +74,9 @@ However, we've already done the work of building this in Docker, why not just co
 #### 2(d)
 Now, to let Singularity do the work of converting the container:
 
-```$ singularity pull mandle.sif docker-daemon:<USERNAME>:mandle-zoom```
+```bash
+$ singularity pull mandle.sif docker-daemon:$USER:mandle-zoom
+```
 
 The output should look like:
 
@@ -120,11 +126,15 @@ We can see some interesting details about our new Singularity container via the
 ```singularity inspect```
 command:
 
-```$ singularity inspect mandle.sif```
+```bash
+$ singularity inspect mandle.sif
+```
 
 We can also see the Definition file used to create the container:
 
-```$ singularity inspect -d mandle.sif```
+```bash
+$ singularity inspect -d mandle.sif
+```
 
 In this case, there isn't much information - if we were handing this off to 
 someone else, it would be kinder to build via a proper definition file!
