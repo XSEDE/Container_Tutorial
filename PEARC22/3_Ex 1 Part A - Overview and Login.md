@@ -34,10 +34,10 @@ to select your username!
 
 You'll be using a virtual cluster in the Jetstream cloud for these exercises. This is a multi-user system, so please be careful!
 
-Host name is: ***sc21-contut.jetstream-cloud.org***
+Host name is: ***pearc22-contut.jetstream-cloud.org***
 
 ``` bash
-ssh <USERNAME>@sc21-contut.jetstream-cloud.org
+ssh <USERNAME>@pearc22-contut.jetstream-cloud.org
 ```
 
 -----
