@@ -55,6 +55,7 @@ Since this tutorial will be presented in-person, conference materials uploaded h
     * Catchup and unresolved questions
 
 10. **Containers for Gateways with Exercises** by [Suresh Marru](https://github.com/smarru), Indiana University
+    * Use the tutorial Science Gateway - [https://container.tutorial.scigap.org/](https://container.tutorial.scigap.org/)
     * Intro to Gateways
     * Sign in to a gateway and run a pre-packaged containerized application with pre-provided inputs
     * Execute applications with user provided input files and plot outputs
