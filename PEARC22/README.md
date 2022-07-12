@@ -1,14 +1,13 @@
 # PEARC22
 
-We will be presenting our tutorial at PEARC22 **in-person** July 10 2022, 8am - 5pm EST.
-Check out the [conference website](https://sc21.supercomputing.org/), [program](https://sc21.supercomputing.org/program/), and our [tutorial](https://sc21.supercomputing.org/presentation/?id=tut135&sess=sess184) on the schedule for more information.
+We presented our tutorial at PEARC22 **in-person** July 10 2022, 8am - 5pm EST.
 
 Materials will be added here soon.
 
 Since this tutorial will be presented in-person, conference materials uploaded here may differ from previous virtual versions.
 
 ## Schedule
-1. [**Introduction to Containers**](https://github.com/XSEDE/Container_Tutorial/blob/main/PEARC22/1_Introduction-to-Containers.pdf) by [Jeremy Fischer](https://github.com/jlf599), Indiana University
+1. [**Introduction to Containers**](https://github.com/XSEDE/Container_Tutorial/blob/main/PEARC22/1_Introduction_to_Containers.pdf) by [Jeremy Fischer](https://github.com/jlf599), Indiana University
     * What is Docker?
     * DockerHub
     * What is Singularity?
@@ -41,7 +40,10 @@ Since this tutorial will be presented in-person, conference materials uploaded h
     * [Singularity Conversion](https://github.com/XSEDE/Container_Tutorial/blob/main/PEARC22/7_Ex%201%20Part%20C%20-%20Singularity%20Conversion.md)
     * [Run via SLURM](https://github.com/XSEDE/Container_Tutorial/blob/main/PEARC22/7_Ex%201%20Part%20D%20-%20Running.md)
 
-8. [**Best Practices & Advanced Topics**](https://github.com/XSEDE/Container_Tutorial/blob/main/PEARC22/8_AdvancedTopics.pdf) by [Peter Vaillancourt](https://github.com/sk8forether), Cornell University
+8. [**Running across XSEDE**](https://github.com/XSEDE/Container_Tutorial/blob/main/PEARC22/8_RunningAcross_XSEDE.pptx) by [Stephen Bird](https://github.com/stebird), Indiana University
+    * Example of running jobs using the same container across XSEDE resources
+
+9. [**Best Practices & Advanced Topics**](https://github.com/XSEDE/Container_Tutorial/blob/main/PEARC22/8_AdvancedTopics.pdf) by [Peter Vaillancourt](https://github.com/sk8forether), Cornell University
     * [Docker To Singularity Conversion](https://github.com/XSEDE/Container_Tutorial/blob/main/PEARC22/8_DockerToSingularity.pdf) (quick overview)
     * Lifecycle of Containers
     * Development vs. Production
@@ -50,9 +52,6 @@ Since this tutorial will be presented in-person, conference materials uploaded h
     * Reproducibility
     * Security
     * Container Orchestration
-
-9. **Open Q&A** by [Jeremy Fischer](https://github.com/jlf599), Indiana University
-    * Catchup and unresolved questions
 
 10. **Containers for Gateways with Exercises** by [Suresh Marru](https://github.com/smarru), Indiana University
     * Use the tutorial Science Gateway - [https://container.tutorial.scigap.org/](https://container.tutorial.scigap.org/)
