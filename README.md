@@ -2,9 +2,10 @@
 The XSEDE Container Tutorial is presented by the XSEDE Cyberinfrastructure Resource Integration (XCRI) team.  This repository contains a collection of slides, exercises, and files for the Container Tutorial presented at various conferences and other venues.  Below is an abstract of what the Tutorial covers.  A directory exists for most events we have presented at with slides and exercises.  Some descriptions of how we have structured the tutorial at each event are included in the corresponding READMEs.  With each presentation, we have taken feedback and followed industry trends to improve the tutorial.
 
 ## Upcoming Accepted Presentations
-Currently submitting tutorials for 2022.  Stay tuned...
+[XSEDE has ended](https://www.hpcwire.com/off-the-wire/access-takes-over-as-xsede-ends-formal-operations/), and thus this repository is primarily archival.
 
 ## Previously Presented At
+* [PEARC22](https://github.com/XSEDE/Container_Tutorial/tree/main/PEARC22) - In-person, July 10, full-day
 * [SC21](https://github.com/XSEDE/Container_Tutorial/tree/main/SC21) - In-person, November 15 2021, 8am - 5pm CST (Full-day)
 * [eScience 2021](https://github.com/XSEDE/Container_Tutorial/tree/main/eScience2021) - Virtual, full-day, [Video](https://youtu.be/mPnrgWjW2jY)
 * [PEARC21](https://github.com/XSEDE/Container_Tutorial/tree/main/PEARC21) - Virtual, full-day
